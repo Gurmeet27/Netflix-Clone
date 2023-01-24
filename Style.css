@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;/*The CSS box-sizing property allows us to include the padding and border in an element's total width and height.*/
+}
+body{
+    background-color: black;
+    color: white;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/back.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 0px 4%;
+    padding-left: 2%;
+    position: relative;
+}
+
+nav{
+    width: 100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.logo{
+    width: 230px;
+    cursor: pointer; 
+    position: relative;
+    animation :mymove 3s infinite;  
+}
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 300px;}
+  }
+.arrow{
+    width:18px;
+    margin-left: 10px;
+}
+nav button{
+    border: 0;
+    outline: 0;
+    background: #db0001;
+    color:#fff;
+    padding:10px 20px;
+    font-size:16px;
+    border-radius:4px;
+    margin-left: 10px;
+    cursor:pointer;
+
+}
+.header-content{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 100px;
+}
+.header-content h1{
+    font-size: 60px;
+    max-width: 650px;
+    font-weight: 600;
+    line-height: 70px;
+}
+.header-content h3{
+    font-weight: 200px;
+    margin-bottom: 20px;
+}
+.email-sign-up{
+    display: flex;
+    background: #fff;
+    border-radius: 4px;
+    align-items: center;
+    margin-top: 30px;
+    overflow: hidden;
+}
+.email-sign-up input{
+    flex:1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+}
+.email-sign-up button{
+    background: #db0001;
+    border: 0;
+    outline: 0;
+    color:#fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 30px;
+}
+.language-btn{
+    display: inline-flex;/*Displays jitne items inside container hai , sirf wahan tak.*/
+    align-items: center;
+    background:transparent;
+    border:1px solid;
+    padding:7px 10px;
+}
+.hr{
+    width: 100%;
+    height: 8px;
+    background-color:#333;
+    border: 0px;
+}
+.features{
+    padding: 10px 12%;
+    font-size: 22px;
+    height:fit-content;
+}
+.row{
+    display: flex; /*Display items pure width tak container jata hai.*/
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 0;
+}
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+    padding-right: 50px;
+}
+.img-col{
+    flex-basis:50%;/*It acts as a widht , basically for the flex item inside the container*/
+    margin-bottom: 20px;
+}
+.img-col img{
+    display: block;/*Displays items capturing the whole widht. Inline-block displays it in line.*/
+    width: 90%;
+    margin: auto;
+}
+.text-col h1{
+    margin-bottom: 25px;
+}
+.faq{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 20px;
+}
+.accordion{
+    margin:60px auto;
+    width:100%;
+    max-width: 750px;
+}
+.accordion li{
+    list-style: none;
+    width:100%;
+    padding:5px;
+}
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding:20px;
+    font-size: 18px;
+    font-weight: 500;
+    background:#303030;
+    margin-bottom: 2px;
+    cursor:pointer;
+    position:relative;
+}
+label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right:20px;
+    transition: transform 0.5s;
+}
+input[type="radio"]{
+    display: none;
+}
+.accordion .content{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s,padding 0.5s;
+}
+.accordion input[type="radio"]:checked+label+ .content{
+    max-height: 650px;
+    padding:30px 20px;
+}
+.accordion input[type="radio"]:checked+label::after{
+    transform: rotate(135deg);
+}
+.faq .email-sign-up{
+    max-width: 650px;
+    margin: 20px auto 60px;
+}
+.footer {
+    padding: 50px 15% 10px;
+    color:#777;
+}
+.footer .col{
+    flex-basis:25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.footer .col a{
+    color:#777;
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.footer .row{
+    align-items: flex-start;
+    padding-top:40px;
+}
+.footer .language-btn{
+    color:#fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+.footer .copyright-txt{
+        font-size:13px;
+        margin-top:15px;
+        margin-bottom: 15px;
+}
+
+/*---------------------media queries for small screen-----------------------------------*/
+
+@media screen {
+    
+}
+
